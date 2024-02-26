@@ -29,7 +29,6 @@ int main()
     for (i = 2;i <= n;i++){
         dp[i][1] = max(dp[i-1][1]+abs(b[i]-b[i-1]),dp[i-1][2]+abs(b[i]-a[i-1]))+a[i];
         dp[i][2] = max(dp[i-1][1]+abs(a[i]-b[i-1]),dp[i-1][2]+abs(a[i]-a[i-1]))+b[i];
-        ans = max({ans,dp[i][1],dp[i][2]});
     }
     cout << max(dp[n][1],dp[n][2]);
     return (0^0)&(200+10);
